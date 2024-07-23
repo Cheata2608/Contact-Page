@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+
+  /* box-sizing: border-box; */
+  /* include padding into box size LIKE '%' */
+}
+section {
+  max-width: 1280px;
+  height: 100%;
+  background-image: url(img/bg-image.svg);
+  background-repeat: no-repeat;
+}
+.icon {
+  margin: 2vw 5vw;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5vw;
+}
+h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+}
+input:placeholder-shown,
+select,
+textarea:placeholder-shown {
+  font-size: 1rem;
+}
+label {
+  color: #fff;
+  font-size: 0.875rem;
+}
+.name {
+  grid-area: name;
+}
+.email {
+  grid-area: mail;
+}
+.size {
+  grid-area: size;
+}
+.subject {
+  grid-area: subject;
+}
+.message {
+  grid-area: message;
+}
+#button {
+  grid-area: btn;
+}
+
+div .input {
+  width: 60vw;
+  padding: 3vw;
+  margin: 5vw 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  display: grid;
+  gap: 2vw;
+  grid-template-areas:
+    "name mail"
+    "size subject"
+    "message message"
+    "btn btn";
+}
+#name,
+#email,
+#size,
+#subject {
+  background-color: #fff;
+  width: 26vw;
+  border-radius: 15px;
+  border: none;
+  padding: 3vh 1.5vw;
+  margin-top: 4px;
+}
+#size,
+#subject {
+  width: 29vw;
+}
+#size,
+#subject {
+  appearance: none;
+  background-image: url(img/Expand_down.svg);
+  background-repeat: no-repeat;
+  background-position: right 1vw center;
+}
+
+#message {
+  width: 57vw;
+  height: 30vh;
+  padding: 1.5vw;
+  border: none;
+  border-radius: 15px;
+  margin-top: 4px;
+}
+#button {
+  color: #4036a9;
+  background-color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  width: 60vw;
+  height: 10vh;
+  border: none;
+  border-radius: 15px;
+}
+@media screen and (max-width: 1024px) {
+  .icon {
+    margin: 2vw 3.5vw;
+  }
+  h1 {
+    font-size: 2.9rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  div .input {
+    width: 84vw;
+  }
+  #name,
+  #email {
+    width: 38vw;
+  }
+  #size,
+  #subject {
+    width: 41vw;
+  }
+  #message {
+    width: 81vw;
+  }
+  #button {
+    width: 84vw;
+  }
+}
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  label {
+    font-size: 0.93rem;
+  }
+  input:placeholder-shown,
+  select,
+  textarea:placeholder-shown {
+    font-size: 0.96rem;
+  }
+  div .input {
+    grid-template-areas:
+      "name "
+      " mail "
+      "size  "
+      "subject "
+      "message "
+      "btn ";
+  }
+  #name,
+  #email {
+    width: 80vw;
+  }
+  #size,
+  #subject {
+    width: 83vw;
+  }
+  #message {
+    height: 20vh;
+  }
+  #button {
+    height: 9vh;
+  }
+}
